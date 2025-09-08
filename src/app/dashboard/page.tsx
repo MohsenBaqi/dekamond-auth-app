@@ -41,7 +41,9 @@ export default function DashboardPage() {
             {user.picture && (
               <div className="flex justify-center">
                 <Image
-                  src={user.picture}
+                  src={`/api/image-proxy?url=${encodeURIComponent(
+                    user.picture
+                  )}`}
                   alt={`${user.name} avatar`}
                   width={80}
                   height={80}
